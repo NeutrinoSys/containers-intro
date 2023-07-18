@@ -3,11 +3,12 @@ package com.neutrinosys.containers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.inject.Inject;
+
 @Service
 public class MyService {
 
-    @Autowired
-    private MyRepository myRepository;
+    private final MyRepository myRepository;
 
     public MyService(MyRepository myRepository) {
         this.myRepository = myRepository;

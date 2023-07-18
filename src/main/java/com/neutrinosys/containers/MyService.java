@@ -8,11 +8,8 @@ import javax.inject.Inject;
 @Service
 public class MyService {
 
-    private final MyRepository myRepository;
-
-    public MyService(MyRepository myRepository) {
-        this.myRepository = myRepository;
-    }
+    @Inject
+    private MyRepository myRepository;
 
     public void process(Object object) {
         System.out.println("Processing... " + object);
